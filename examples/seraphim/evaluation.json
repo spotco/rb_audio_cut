@@ -1,0 +1,16 @@
+{
+  "song": "Xeveir and Xeron — Seraphim",
+  "evaluated_date": "2026-10-31",
+  "variants": {
+    "A_one_repeat_join": {
+      "status": "rejected",
+      "owner_feedback": "unfortunately this one was not good - (Seraphim_A) - right at the splice, there seems to be a sudden note that jumps out. listening to it - it seems like this one should be doable (structurally the splice makes sense and fits - just that one sudden note at 1:15 where the splice is. if it helps - this bad note sounds a bit like a held strings.",
+      "scope": "complete_edit"
+    },
+    "B_later_in_repeat_join": {
+      "status": "approved",
+      "owner_feedback": "yep - B is good. crazy work. what's the difference?",
+      "scope": "complete_edit"
+    }
+  }
+}
