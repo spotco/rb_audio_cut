@@ -1,0 +1,53 @@
+{
+  "source_name": "Jouxl Eterna - -JKCD004- Realm of Neogravity E.P. - 05 Realm of Neogravity.mp3",
+  "source_sha256": "7bedf936f89991323ffcdfab2c360d4172a764d6775c2305d7d7b6486f9fef23",
+  "source_seconds": 356.0134013605442,
+  "sample_rate_hz": 44100,
+  "source_channels": 2,
+  "source_size_bytes": 14243300,
+  "method": "Existing reproduce_edits.py: float32 stereo PCM; round(seconds*sample_rate) slices; linear 120ms overlap; PCM_24 WAV intermediate; FFmpeg libmp3lame -qscale:a 0. No pitch/tempo modification.",
+  "variants": {
+    "A_one_repeat_join": {
+      "description": "Owner-approved one-jump edit retaining the opening and complete original ending.",
+      "segments": [
+        [
+          0,
+          89.13
+        ],
+        [
+          299.337278912,
+          356.0134013605442
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "A_one_repeat_join.mp3",
+      "duration_seconds": 145.686122449,
+      "junction_output_seconds": [
+        89.01
+      ],
+      "reference_encoded_seconds": 145.737143,
+      "reference_output_sha256": "c728f7b6285b518527f96f79f353d64bcc2a55854025c745096c4ba3a8b489df",
+      "source_sample_indices": {
+        "segments": [
+          [
+            0,
+            3930633
+          ],
+          [
+            13200774,
+            15700191
+          ]
+        ],
+        "fade_samples": [
+          5292
+        ],
+        "junction_output_sample_indices": [
+          3925341
+        ]
+      },
+      "notes": "Left-source fade starts 89.010 s, aligns to later source 299.337278912 s; fade ends 89.130 s. This approval applies to the complete edit, not any claimed universal match threshold."
+    }
+  }
+}
