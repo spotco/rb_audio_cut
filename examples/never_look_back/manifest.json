@@ -1,0 +1,138 @@
+{
+  "source_name": "BSlick - Never Look Back (feat. Ari-3) - from The Grand Eggspress OST.mp3",
+  "source_sha256": "09ac8101ecad8fd46e122e3de151bf800da2fdeea2acf4290e03147047566f1f",
+  "source_seconds": 303.97866666666664,
+  "sample_rate_hz": 48000,
+  "source_channels": 2,
+  "source_size_bytes": 5742217,
+  "method": "rb_audio_cut/reproduce_edits.py: float32 stereo PCM, round(seconds * sample_rate) indexing, 120 ms linear overlap (np.linspace endpoint included), PCM_24 WAV intermediate, ffmpeg libmp3lame -qscale:a 0. No pitch shift, tempo change or source separation.",
+  "status": "A_rejected_B_acceptable_C_approved_preferred",
+  "variants": {
+    "A_vocal_phrase_boundary": {
+      "status": "rejected_by_owner",
+      "description": "Initial ≤2:30 vocal-phrase-boundary attempt. Rejected: obvious loudness and background-instrument discontinuity, visible in waveform at edited ~1:33; short overlap and beat similarity did not ensure arrangement continuity.",
+      "segments": [
+        [
+          0,
+          92.936
+        ],
+        [
+          255.672,
+          303.97866666666664
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "BSlick_Never_Look_Back_A.mp3",
+      "duration_seconds": 141.12266666666665,
+      "junction_output_seconds": [
+        92.816
+      ],
+      "source_sample_indices": {
+        "segments": [
+          [
+            0,
+            4460928
+          ],
+          [
+            12272256,
+            14590976
+          ]
+        ],
+        "crossfade_samples": [
+          5760
+        ],
+        "crossfade_start_output_samples": [
+          4455168
+        ]
+      },
+      "reference_encoded_seconds": 141.168,
+      "reference_output_sha256": "4af9473a301987b99d6106eb0ef11abb3c5bb3a929a73d24078fef15e99d3315"
+    },
+    "B_same_arrangement_repeat_join": {
+      "status": "acceptable_by_owner_not_preferred",
+      "description": "After explicit 1:30–3:30 relaxation, shift to one later same-arrangement structural jump. Owner found it acceptable but audible bass change remains for attentive listeners. Short-fade bass correlation ~0.96; surrounding 1.2s 35–170 Hz correlation ~0.24.",
+      "segments": [
+        [
+          0,
+          145.465
+        ],
+        [
+          251.22,
+          303.97866666666664
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "BSlick_Never_Look_Back_B.mp3",
+      "duration_seconds": 198.10366666666664,
+      "junction_output_seconds": [
+        145.345
+      ],
+      "source_sample_indices": {
+        "segments": [
+          [
+            0,
+            6982320
+          ],
+          [
+            12058560,
+            14590976
+          ]
+        ],
+        "crossfade_samples": [
+          5760
+        ],
+        "crossfade_start_output_samples": [
+          6976560
+        ]
+      },
+      "reference_encoded_seconds": 198.144,
+      "reference_output_sha256": "3b67f287fb284704c247ceebc1e610bb17c1df723b604ec02d8cc437384ee4e3"
+    },
+    "C_later_bass_coherent_repeat_join": {
+      "status": "approved_by_owner_preferred",
+      "description": "Move both endpoints about 10 seconds later in the same repeated arrangement; stronger low-frequency phrase-context agreement (about 0.91 correlation over 1.2s, vs B ~0.24), while maintaining ~0.95 bass overlap correlation. User approved full C edit as preferred.",
+      "segments": [
+        [
+          0,
+          155.8
+        ],
+        [
+          261.394,
+          303.97866666666664
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "BSlick_Never_Look_Back_C.mp3",
+      "duration_seconds": 198.26466666666667,
+      "junction_output_seconds": [
+        155.68
+      ],
+      "source_sample_indices": {
+        "segments": [
+          [
+            0,
+            7478400
+          ],
+          [
+            12546912,
+            14590976
+          ]
+        ],
+        "crossfade_samples": [
+          5760
+        ],
+        "crossfade_start_output_samples": [
+          7472640
+        ]
+      },
+      "reference_encoded_seconds": 198.312,
+      "reference_output_sha256": "0d834edc5ad5ac897019e685d5518c1239556eff26eae10443e5757bdb047033"
+    }
+  }
+}
