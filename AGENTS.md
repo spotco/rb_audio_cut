@@ -24,3 +24,10 @@
 - Do not install an automatic numeric threshold as an arrangement-quality gate. A and B correlations were ~0.781 and ~0.786 despite different human results. Manual owner listening is authoritative.
 - `scripts/inspect_join.py` is a reusable source-pinned **diagnostic** (hash, geometry, overlap/RMS/edge), not a voice/instrument detector. See `docs/arrangement_continuity.md` and `examples/fallen_sentience/evaluation.json`.
 - **Exact label correction:** the B fade begins at **0:55.900**, not 0:55.780 as mistakenly stated in an earlier chat reply; 0:56.020 is the end of its 120 ms overlap. Preserve the manifest/PCM values.
+
+## Never Look Back A/B/C — vocal and bass-continuity lesson (2026-10-31)
+
+- This is a **different song** from seatrus; preserve its own [exact evaluation](examples/never_look_back/evaluation.json): Never Look Back A rejected (visible/audible loudness and instrumental discontinuity), B **acceptable** despite a faint bass jump, C **approved and chosen**. Do not relabel B rejected or imply B and C were independently proposed before owner feedback.
+- Owner explicitly relaxed the goal from ≤2:30 to **1:30–3:30** after A was rejected; C is 3:18.312 (encoded). The next song still defaults to one A and ≤2:30 until instructed otherwise.
+- **New low-end lesson:** good matching inside a short 120 ms bass crossfade does not ensure the surrounding bass *phrase* continues. For B, short-fade bass correlation was ~0.96 but 1.2-second 35–170 Hz phrase-context correlation ~0.24; C moved both windows ~10 s later and reached ~0.91 in that longer context while maintaining ~0.95 inside fade. This is diagnostic, not a universal score threshold. Check active backing instruments, vocal phrase and low-end envelope over seconds on both sides.
+- Exact source-hash-pinned A/B/C recipe, labels and C byte-exact rendering evidence are in `examples/never_look_back/`. No need to add speculative automatic gates or commit ephemeral analysis scripts/audio files.
