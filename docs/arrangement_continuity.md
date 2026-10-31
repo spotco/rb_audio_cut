@@ -21,3 +21,9 @@ The B investigation widened the skip window, compared chroma/MFCC passages with 
 To broaden the repository's existing structural suggestion search under an **explicit** 3:30 maximum, use `analysis/suggest_one_cut.py --features ... --source ... --target 210 --tolerance 35`, then manually inspect longer phrase contexts. Algorithmic ranking is provisional.
 
 See [source-pinned A/B comparison](../examples/fallen_sentience/README.md) and [exact feedback](../examples/fallen_sentience/evaluation.json).
+
+## Never Look Back: short-fade bass match versus phrase-scale bass continuity
+
+The [owner-evaluated A/B/C progression](../examples/never_look_back/README.md) adds a distinct failure mode. A's apparent beat/vocal-boundary match had an obvious **loudness and background instrumentation jump**, visible in Audacity; it was rejected. B moved to better-matched instrumentation after permission to use up to 3:30. B was owner-acceptable, but its bass pattern still jumped slightly. Despite ~0.96 bass waveform correlation *inside* the 120 ms fade, B's ~1.2-second 35–170 Hz neighborhood correlation was only ~0.24. Sliding both source splice windows later within the repeated phrase improved the longer bass-context correlation to ~0.91 and retained ~0.95 fade overlap correlation. The owner **approved C** (3:18.312) over B.
+
+**Add this to manual inspection**: evaluate low-end phrase continuity (envelope, phase/cadence, note identity), levels and active instrumental/vocal content before and after both source windows over multiple beats, not just at overlap. If a splice sounds almost clean but a bass pattern changes, try sliding both endpoints in the repeated phrase while preserving the removal length, as in Seraphim, rather than adding EQ or lengthening the fade. Those correlation values are case-specific **diagnostics**, not validated thresholds or a guarantee of good vocal continuity. Human listening remains authoritative.
