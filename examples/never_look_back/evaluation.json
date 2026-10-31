@@ -1,0 +1,24 @@
+{
+  "song": "BSlick – Never Look Back (feat. Ari<3), from The Grand Eggspress OST",
+  "evaluated_on": "2026-10-31",
+  "evaluation_unit": "complete edited MP3; individual seams not independently approved",
+  "target": "Initially ≤2:30; owner explicitly relaxed accepted range to 1:30–3:30 after rejecting A.",
+  "variants": {
+    "A_vocal_phrase_boundary": {
+      "status": "rejected",
+      "quoted_owner_feedback": "sorry - not good. sudden jump in volume at the splice and discontinuous bg instruments. it's even visible in the waveform (attached).",
+      "reason": "Obvious arrangement and level jump despite apparently matching rhythm; verified by owner waveform inspection."
+    },
+    "B_same_arrangement_repeat_join": {
+      "status": "acceptable_not_preferred",
+      "quoted_owner_feedback": "not bad - you can still kinda hear the jump in the bass at the splice (if paying attention), but this one is acceptable.",
+      "reason": "Far better arrangement and level continuity, but faint low-end phrase discontinuity."
+    },
+    "C_later_bass_coherent_repeat_join": {
+      "status": "approved_preferred",
+      "quoted_owner_feedback": "yep, C is good - going with this.",
+      "reason": "Owner chose C over acceptable B after bass-context refinement."
+    }
+  },
+  "caveat": "Numeric similarity is only diagnostic; this case does not justify a fixed correlation cutoff or automated vocal continuity certification."
+}
