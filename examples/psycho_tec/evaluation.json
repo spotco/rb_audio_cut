@@ -1,0 +1,16 @@
+{
+  "song": "TeKno.loji — PSYCHO.TEC-",
+  "evaluated_date": "2026-10-31",
+  "variants": {
+    "A_one_repeat_join": {
+      "status": "approved",
+      "scope": "complete_edit",
+      "owner_feedback": "psycotec  A approved - nice work.",
+      "encoded_duration_seconds": 145.632653,
+      "junction_output_seconds": [
+        81.925
+      ]
+    }
+  },
+  "notes": "Owner explicitly approved the delivered complete Candidate A. No alternatives were generated or evaluated. Technical overlap/phase correlation is not a listener rating."
+}
