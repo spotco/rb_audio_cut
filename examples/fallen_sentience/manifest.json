@@ -1,0 +1,62 @@
+{
+  "source_name": "Titanium Ʌngel - -JKCD005- - Ʌngelic Mechanism - - 02 Fallen Sentience.mp3",
+  "source_sha256": "494d4124d718c9fdff84e5d40f42bc5353e657d7305d01434960aa3e286d3dd9",
+  "source_seconds": 222.551179138322,
+  "sample_rate_hz": 44100,
+  "method": "float32 stereo PCM; round(seconds*sample_rate) slices; linear overlap crossfade; PCM_24 WAV and ffmpeg libmp3lame -qscale:a 0; no tempo/pitch changes. See reproduce_edits.py.",
+  "variants": {
+    "A_one_repeat_join": {
+      "description": "First rhythmic passage followed by waveform-matched jump into later piano-led energetic section; preserves entire ending. Owner: acceptable but audible sudden piano entrance.",
+      "segments": [
+        [
+          0,
+          49.995
+        ],
+        [
+          134.702577,
+          222.551179138322
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "notes": "Crossfade begins at 49.875011 s in output. Background beat matched but piano enters unexpectedly; listener does not prefer this edit.",
+      "output": "Fallen_Sentience_A.mp3",
+      "duration_seconds": 137.72360544217688,
+      "junction_output_seconds": [
+        49.875011338
+      ]
+    },
+    "B_one_first_section_repeat_join": {
+      "description": "Approved: remove a repeat within the same initial energetic arrangement, preserving middle development, later piano-led passage and ending.",
+      "segments": [
+        [
+          0,
+          56.02
+        ],
+        [
+          89.00345464852607,
+          222.551179138322
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "notes": "Crossfade begins at 55.900 s in output, matching original source 55.900 -> 89.003455; 4-second waveform-context refinement. Human evaluation: cannot hear join.",
+      "output": "Fallen_Sentience_B.mp3",
+      "duration_seconds": 189.44773242630384,
+      "junction_output_seconds": [
+        55.9
+      ]
+    }
+  },
+  "reference_render_sha256": {
+    "A_one_repeat_join": "be6db0ae40d436b7c3406dff7c8cdcd7a58e3ec10b82533fd97a90db325f2654",
+    "B_one_first_section_repeat_join": "6e5856641c22d6d16884abf3593118973617779c1fe8f45f1d80d4c6d310e155"
+  },
+  "reference_encoded_seconds": {
+    "A_one_repeat_join": 137.769796,
+    "B_one_first_section_repeat_join": 189.492245
+  },
+  "listener_evaluation": "evaluation.json"
+}
