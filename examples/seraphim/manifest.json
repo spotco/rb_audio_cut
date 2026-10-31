@@ -1,0 +1,58 @@
+{
+  "source_name": "Xeveir and Xeron - -JKCD002- Seraphim - 04 Seraphim.mp3",
+  "source_sha256": "80d247e5044d94412b0e32b9743e3c9a0ea9a09d17f89e42581eefc5e5648aa0",
+  "source_seconds": 282.5439002267574,
+  "sample_rate_hz": 44100,
+  "source_channels": 2,
+  "source_size_bytes": 11305024,
+  "method": "Existing reproduce_edits.py: float32 stereo PCM; round(seconds*sample_rate) slices; linear 120ms overlap; PCM_24 WAV intermediate; FFmpeg libmp3lame -qscale:a 0. No pitch/tempo modification.",
+  "variants": {
+    "A_one_repeat_join": {
+      "description": "Original A; listener rejected an abrupt held-string-like note at the join despite correct rhythmic/technical continuity.",
+      "segments": [
+        [
+          0,
+          75.12
+        ],
+        [
+          216.271,
+          282.5439002267574
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "A_one_repeat_join.mp3",
+      "duration_seconds": 141.272902,
+      "junction_output_seconds": [
+        75
+      ],
+      "reference_encoded_seconds": 141.322449,
+      "reference_output_sha256": "99a5ea8640af92d6b6d5b485a782f237e8e7406a0818c601e15700b5274c0b8d"
+    },
+    "B_later_in_repeat_join": {
+      "description": "Owner-approved revision: move both fade starts ~7.2s later inside the same repeated energetic phrase; avoid A's sudden held-note-like entrance.",
+      "segments": [
+        [
+          0,
+          82.32
+        ],
+        [
+          223.467,
+          282.5439002267574
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "B_later_in_repeat_join.mp3",
+      "duration_seconds": 141.27689342403627,
+      "junction_output_seconds": [
+        82.2
+      ],
+      "reference_encoded_seconds": 141.322449,
+      "reference_output_sha256": "35a81444d0fcedb0316b34dc2cfe722aec8ea1713bfd57be7067c003122daf89",
+      "notes": "Left fade starts 82.200 s and ends 82.320 s. Right fade starts 223.467 s. Offset 141.267 s vs A 141.271 s (~4 ms refined)."
+    }
+  }
+}
