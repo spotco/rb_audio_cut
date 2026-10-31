@@ -2,7 +2,7 @@
 
 Experimental music-shortening tools and a reproducible, human-evaluated first experiment.
 
-**Status (2026-10-31):** Two human-accepted full edits: seatrus A (three splices) and Flaming Sky A (one splice). Seatrus B/C were rejected for vocal jumps; Flaming Sky B/C were **not listened to**. This is *not* yet a general-purpose automatic song editor. Candidate discovery and vocal-aware ranking remain experimental.
+**Status (2026-10-31):** seatrus A and Flaming Sky A were owner-accepted; on *Fallen Sentience*, B was approved/preferred while A was acceptable with an audible arrangement jump. Seatrus B/C were rejected for vocal jumps; Flaming Sky B/C were **not listened to**. This is *not* yet a general-purpose automatic song editor. Candidate discovery and vocal-aware ranking remain experimental.
 
 ## Quick start
 
@@ -72,7 +72,7 @@ python analysis/match.py out/analysis/features.npz --from-range 63 64 --to-range
 After the Flaming Sky listening evaluation, **produce one carefully chosen A candidate, then stop for feedback**. Do not generate B/C until A is rejected or the owner requests alternatives. Include the full MP3, splice audition(s), an exact source-pinned manifest, Audacity labels, and QC. Favor instrumental repeat-matched jumps with crossfade-phase alignment; numerical similarity is *not* vocal-continuity or human acceptance.
 
 - [Single-candidate protocol](docs/one_candidate_workflow.md) — reproducible future workflow and guardrails.
-- [Accepted Flaming Sky edit](examples/flaming_sky/README.md) — owner-approved A: **2:28.428**, one join at edited-output 1:30.880. B/C not listened to.
+- [Approved Fallen Sentience B / A comparison](examples/fallen_sentience/README.md) — A's beat matched but piano entrance was surprising; B's within-arrangement splice was inaudible to the owner, at 3:09.492 with explicitly relaxed duration.\n- [Arrangement continuity checklist](docs/arrangement_continuity.md) — examine active instrumentation and several-second phrase arcs, not just rhythmic or waveform similarity.\n- [Optional join inspector](scripts/inspect_join.py) — source-pinned stereo overlap/edge diagnostics; not a musical quality gate.\n- [Accepted Flaming Sky edit](examples/flaming_sky/README.md) — owner-approved A: **2:28.428**, one join at edited-output 1:30.880. B/C not listened to.
 - [Single-cut suggestion tool](analysis/suggest_one_cut.py) — experimental structural shortlist from analysis feature cache, refined by waveform alignment.
 - [Single-variant renderer](scripts/render_one.py) — one MP3, splice auditions, labels, and exact source/duration QC.
 
