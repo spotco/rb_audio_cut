@@ -1,0 +1,29 @@
+{
+  "source": "seatrus feat. 愛原圭織 - 終末を詠う少女",
+  "date": "2026-10-31",
+  "evaluator": "human listener / repository owner",
+  "variants": {
+    "A_structure_and_outro": {
+      "human_result": "accepted",
+      "human_feedback": "Sounds great; instrumental jumps within instrumental/transition sections work well.",
+      "splice_feedback": [
+        {"output_seconds": 63.13, "result": "accepted_as_part_of_edit"},
+        {"output_seconds": 66.73, "result": "accepted_as_part_of_edit"},
+        {"output_seconds": 129.26, "result": "accepted_as_part_of_edit"}
+      ],
+      "note": "The listener accepted A overall, not each junction via separate isolated rating."
+    },
+    "B_one_splice_229": {
+      "human_result": "rejected",
+      "human_feedback": "Bad; noticeable vocal jump.",
+      "splice_feedback": [{"output_seconds": 49.55, "result": "rejected", "reason": "noticeable vocal discontinuity"}]
+    },
+    "C_repeated_vocal_214": {
+      "human_result": "rejected",
+      "human_feedback": "Bad; noticeable vocal jump.",
+      "splice_feedback": [{"output_seconds": 34.47, "result": "rejected", "reason": "noticeable vocal discontinuity"}]
+    }
+  },
+  "hypothesis": "Vocal continuity matters independently of harmonic/spectral similarity; prioritize instrumental joins, then vocal phrase boundaries. Not yet validated across multiple songs.",
+  "caveat": "One-song subjective dataset; these labels are not a general model accuracy benchmark."
+}

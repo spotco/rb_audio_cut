@@ -1,0 +1,89 @@
+{
+  "source_name": "source.mp3",
+  "source_seconds": 273.36,
+  "sample_rate_hz": 48000,
+  "method": "Original stereo source PCM + short linear-overlap crossfades; each edit ends with original mastered ending. These are automated structural prototypes, not human-auditioned finals.",
+  "variants": {
+    "A_structure_and_outro": {
+      "description": "Keeps the electronic break, closing verse/chorus, and original ending, shortening two repeated passages.",
+      "segments": [
+        [
+          0,
+          63.25
+        ],
+        [
+          76.5,
+          80.75
+        ],
+        [
+          171.25,
+          234.0
+        ],
+        [
+          253.5,
+          273.36
+        ]
+      ],
+      "crossfades": [
+        0.12,
+        0.65,
+        0.22
+      ],
+      "output": "A_structure_and_outro.mp3",
+      "duration_seconds": 149.12,
+      "junction_output_seconds": [
+        63.13,
+        66.73,
+        129.26
+      ]
+    },
+    "B_one_splice_229": {
+      "description": "Simple edit: intro/first verse, then later verse through the complete original ending.",
+      "segments": [
+        [
+          0,
+          50.0
+        ],
+        [
+          174.75,
+          273.36
+        ]
+      ],
+      "crossfades": [
+        0.45
+      ],
+      "output": "B_one_splice_229.mp3",
+      "duration_seconds": 148.16,
+      "junction_output_seconds": [
+        49.55
+      ]
+    },
+    "C_repeated_vocal_214": {
+      "description": "Single early cut where first and later vocal verse material strongly matches; preserves the full final chorus and outro.",
+      "segments": [
+        [
+          0,
+          34.75
+        ],
+        [
+          174.0,
+          273.36
+        ]
+      ],
+      "crossfades": [
+        0.28
+      ],
+      "output": "C_repeated_vocal_214.mp3",
+      "duration_seconds": 133.83,
+      "junction_output_seconds": [
+        34.47
+      ]
+    }
+  },
+  "source_sha256": "24257f805f4ca3ff9fb340fbda6555ae6721f7fa2e0403a8c81317e6609d7027",
+  "reference_render_sha256": {
+    "A_structure_and_outro": "3e8f7985f43c44acb78017d0c078719afe41fa9a73bcb1b3b4e5cfd1e850e405",
+    "B_one_splice_229": "46238315fab213f25673c942b82cf4fe6aa321b7436a781416d7b5cd3ef4b633",
+    "C_repeated_vocal_214": "45b6becccead938b7fd01053a4b0ebc9f074c357ce1cec8a3824833970861afa"
+  }
+}
