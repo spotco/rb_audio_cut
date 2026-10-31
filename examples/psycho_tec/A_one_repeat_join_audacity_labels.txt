@@ -1,0 +1,1 @@
+81.925	81.925	Splice 1: source 82.05s to 302.47s (crossfade 0.12s)
