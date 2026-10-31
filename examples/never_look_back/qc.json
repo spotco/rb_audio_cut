@@ -1,0 +1,34 @@
+{
+  "source_sha256": "09ac8101ecad8fd46e122e3de151bf800da2fdeea2acf4290e03147047566f1f",
+  "sample_rate_hz": 48000,
+  "channels": 2,
+  "source_duration_seconds": 303.97866666666664,
+  "source_sample_count_per_channel": 14590976,
+  "crossfade_samples": 5760,
+  "results": {
+    "A_vocal_phrase_boundary": {
+      "pcm_seconds": 141.12266666666665,
+      "encoded_seconds": 141.168,
+      "output_sha256": "4af9473a301987b99d6106eb0ef11abb3c5bb3a929a73d24078fef15e99d3315",
+      "splice_fade_start_output_seconds": 92.816
+    },
+    "B_same_arrangement_repeat_join": {
+      "pcm_seconds": 198.10366666666664,
+      "encoded_seconds": 198.144,
+      "output_sha256": "3b67f287fb284704c247ceebc1e610bb17c1df723b604ec02d8cc437384ee4e3",
+      "splice_fade_start_output_seconds": 145.345
+    },
+    "C_later_bass_coherent_repeat_join": {
+      "pcm_seconds": 198.26466666666667,
+      "encoded_seconds": 198.312,
+      "output_sha256": "0d834edc5ad5ac897019e685d5518c1239556eff26eae10443e5757bdb047033",
+      "splice_fade_start_output_seconds": 155.68,
+      "rerender_verified_byte_exact": true,
+      "rerender_output_bytes": 5296316,
+      "audition_sha256": "6193e197a34092d9de66d6e14aa5a656d8a1abc6c6f21045a1f8ee8b01a56a66"
+    }
+  },
+  "checks": "Verified exact source file SHA-256, decoded MP3 48 kHz stereo, manifest sample geometry and C encoded output, and byte-for-byte C reproduction against the delivered MP3 on 2026-10-31. Reproduction across different FFmpeg versions may not yield identical MP3 bytes.",
+  "human_status": "A rejected; B acceptable fallback; C preferred and approved. See evaluation.json.",
+  "note": "The numerical values are measurements only, not automated acceptance thresholds."
+}
