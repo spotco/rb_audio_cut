@@ -1,0 +1,49 @@
+{
+  "variant": "A_one_repeat_join",
+  "kind": "technical_QC_not_listening_certification",
+  "source_sha256": "ea4b202046cbd7f96699021f2adf8a04d9e89b1f0c6336437f61628f72cd9e25",
+  "source_size_bytes": 14816078,
+  "source_sample_frames": 16146038,
+  "source_sample_rate_hz": 44100,
+  "source_channels": 2,
+  "source_duration_decoded_sec": 366.1233106575964,
+  "source_sample_ranges": [
+    [
+      0,
+      3618184
+    ],
+    [
+      13338821,
+      16146038
+    ]
+  ],
+  "overlap_samples": 5292,
+  "splice_output_start_sample": 3612892,
+  "splice_output_start_seconds": 81.92498866213153,
+  "source_right_overlap_start_seconds": 302.4675963718821,
+  "output_frames": 6420109,
+  "output_pcm_seconds": 145.5807029478458,
+  "encoded_mp3_seconds": 145.632653,
+  "reference_output_sha256": "2fde44a44de2a38c05fe81e0db0ac38bea619fad8b8db49612f82ec81f0cd034",
+  "stereo_overlap_correlation": 0.7624911737816842,
+  "overlap_rms_difference_db": 1.1833186215186486,
+  "max_pcm_boundary_steps": [
+    0.1421470046043396,
+    0.1833389401435852
+  ],
+  "nearby_pcm_diff_p999": 0.7738881460502748,
+  "audition_decoded_seconds": 16,
+  "reproduced_local_output_sha256": "2fde44a44de2a38c05fe81e0db0ac38bea619fad8b8db49612f82ec81f0cd034",
+  "checks": {
+    "source_hash_verified": true,
+    "source_geometry_verified": true,
+    "stereo_verified": true,
+    "manifest_duration_verified": true,
+    "encoded_duration_under_150_seconds": true,
+    "output_reference_mp3_byte_exact_reproduction": true,
+    "original_ending_retained": true,
+    "audition_7_seconds_before_9_seconds_after": true,
+    "edge_deltas_below_local_p999": true
+  },
+  "caveat": "PCM, SHA and timing checks establish edit reproducibility, not perceptual quality. Approval is a separate human listening result in evaluation.json."
+}
