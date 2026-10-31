@@ -28,3 +28,11 @@ Then render a single manifest variant:
 - **JinoBeats — Flaming Sky (Embers of Heaven Long Ver.):** A accepted as a whole, 2:28.428, one repeat-matched instrumental jump at output 1:30.880. Owner never listened to B/C. Demonstrates value of attempting a single strong cut before generating multiple variants.
 
 These are two accepted whole edits, not a statistically meaningful automatic-success benchmark.
+
+## Arrangement-continuity revision from Fallen Sentience (2026-10-31)
+
+Owner feedback to A: "acceptable, but a little odd": the piano began unexpectedly even though the background beat aligned. A was **not rejected**. A revised B was permitted to run **2:30–3:30**, skipped a shorter same-arrangement passage, and was explicitly **approved** with the feedback "cannot even hear it." B is 3:09.492, one join whose edited-output crossfade starts at 0:55.900 (not the erroneous 0:55.780 quoted earlier).
+
+**Required manual check for future cuts:** compare multi-second contexts before and after the join for instrument entrances, phrase/buildup logic, vocal/lead continuity and section role; a matching drum groove alone is insufficient. Try a smaller repeated-phrase removal within the same musical arrangement when an early-to-late jump suddenly changes the texture. Do not relax the user's duration cap unless explicitly authorized. First offer just A, then revise only on feedback.
+
+The song-specific exploratory scan used wider skip durations and ~4-second phase/waveform contexts. The existing `analysis/suggest_one_cut.py` accepts `--target 210 --tolerance 35` to broaden a *user-authorized* 3:30 search; it still cannot detect arrangement changes. Optional `scripts/inspect_join.py --source ... --manifest ... --variant ...` reproduces numeric overlap and edge QC with checksum enforcement. Numeric scores **do not** certify acceptance; compare A (~0.781) vs B (~0.786). Full details: [arrangement continuity](arrangement_continuity.md) and [human evaluation](../examples/fallen_sentience/evaluation.json).
