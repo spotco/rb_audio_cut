@@ -27,7 +27,7 @@ Then render a single manifest variant:
 - **seatrus feat. 愛原圭織 — 終末を詠う少女:** A accepted as a whole; B/C rejected for obvious vocal jumps. Do not trust high structural similarity alone.
 - **JinoBeats — Flaming Sky (Embers of Heaven Long Ver.):** A accepted as a whole, 2:28.428, one repeat-matched instrumental jump at output 1:30.880. Owner never listened to B/C. Demonstrates value of attempting a single strong cut before generating multiple variants.
 
-These are two accepted whole edits, not a statistically meaningful automatic-success benchmark.
+These were the first two accepted whole edits; later owner-evaluated examples below add further evidence but not a statistically meaningful automatic-success benchmark.
 
 ## Arrangement-continuity revision from Fallen Sentience (2026-10-31)
 
@@ -36,3 +36,10 @@ Owner feedback to A: "acceptable, but a little odd": the piano began unexpectedl
 **Required manual check for future cuts:** compare multi-second contexts before and after the join for instrument entrances, phrase/buildup logic, vocal/lead continuity and section role; a matching drum groove alone is insufficient. Try a smaller repeated-phrase removal within the same musical arrangement when an early-to-late jump suddenly changes the texture. Do not relax the user's duration cap unless explicitly authorized. First offer just A, then revise only on feedback.
 
 The song-specific exploratory scan used wider skip durations and ~4-second phase/waveform contexts. The existing `analysis/suggest_one_cut.py` accepts `--target 210 --tolerance 35` to broaden a *user-authorized* 3:30 search; it still cannot detect arrangement changes. Optional `scripts/inspect_join.py --source ... --manifest ... --variant ...` reproduces numeric overlap and edge QC with checksum enforcement. Numeric scores **do not** certify acceptance; compare A (~0.781) vs B (~0.786). Full details: [arrangement continuity](arrangement_continuity.md) and [human evaluation](../examples/fallen_sentience/evaluation.json).
+
+## New human-verified examples: Neogravity A and Seraphim A → B (2026-10-31)
+
+- [**Realm of Neogravity A**](../examples/realm_of_neogravity/README.md): owner-approved single join at edited output **1:29.010**, MP3 **2:25.737**, preserving the intro and entire ending; no new algorithm or extra variants required.
+- [**Seraphim A/B**](../examples/seraphim/README.md): A was **rejected** for an abrupt held-string-like note at **1:15.000**, although its rhythm and geometry fit. B moved **both** splice points roughly **7.2 seconds later within the same repeated musical phrase**, retaining approximately the same skipped length and the same **2:21.322** output. B's fade begins at **1:22.200**. The owner explicitly **approved B**.
+
+**Revision rule:** If the overall structural jump makes musical sense but a particular instrumental note, sustain or lead entrance sounds abrupt, first **slide the paired splice windows along the repeated passage** (maintain nearly the same removed interval) to find a corresponding harmonic/phrase moment. Re-evaluate **several seconds of active instrumentation** around both source windows and phase-align the short overlap; don't only line up drums or optimize instantaneous waveform correlation. This can solve a localized musical discontinuity **without** exceeding the original duration cap. A longer, safer cut is a fallback only with owner permission. Store both rejected and accepted geometries and the owner's actual feedback; technical QC never overrides listening.
