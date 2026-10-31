@@ -14,7 +14,46 @@ MANIFEST = ROOT / 'examples/seatrus/manifest.json'
 SOURCE = ROOT / 'examples/seatrus/source.mp3'
 
 
+
+def assemble_new_examples():
+    """Assemble each explicitly staged example from its pinned manifest."""
+    for folder in sorted(p for p in CHUNKS.iterdir() if p.is_dir()):
+        slug = folder.name
+        if not slug.replace('_', '').isalnum() or slug != slug.lower():
+            raise ValueError(f'Invalid example slug: {slug}')
+        info = json.loads((folder / 'index.json').read_text(encoding='utf-8'))
+        manifest = json.loads((ROOT / 'examples' / slug / 'manifest.json').read_text(encoding='utf-8'))
+        filename = manifest['source_name']
+        if not filename or filename != Path(filename).name or '/' in filename or '\\' in filename:
+            raise ValueError(f'Unsafe source filename: {filename!r}')
+        expected = manifest['source_sha256']
+        if info['source_sha256'] != expected or info['source_name'] != filename:
+            raise ValueError(f'Source transfer metadata mismatch: {slug}')
+        count = info['chunk_count']
+        if type(count) is not int or count < 1 or count > 100:
+            raise ValueError(f'Invalid source chunk count: {slug}')
+        parts = sorted(folder.glob('*.b64'))
+        if [p.name for p in parts] != [f'{i:04d}.b64' for i in range(count)]:
+            raise RuntimeError(f'Incomplete source transfer chunks: {slug}')
+        encoded = ''.join(''.join(p.read_text(encoding='ascii').split()) for p in parts)
+        raw = base64.b64decode(encoded, validate=True)
+        actual = hashlib.sha256(raw).hexdigest()
+        if actual != expected or len(raw) != info['source_size_bytes']:
+            raise RuntimeError(f'Source SHA-256 or size mismatch for {slug}: {actual}')
+        target = ROOT / 'examples' / slug / filename
+        if target.exists():
+            if hashlib.sha256(target.read_bytes()).hexdigest() != expected:
+                raise RuntimeError(f'Existing source checksum mismatch: {target}')
+            print(f'Already verified source: {target}')
+        else:
+            target.write_bytes(raw)
+            print(f'Materialized verified source: {target} ({len(raw)} bytes)')
+
+
 def main():
+    if CHUNKS.is_dir() and any(p.is_dir() for p in CHUNKS.iterdir()):
+        assemble_new_examples()
+        return
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
     expected = manifest['source_sha256']
     if SOURCE.is_file():

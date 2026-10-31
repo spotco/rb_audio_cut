@@ -23,7 +23,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- examples/seatrus/source.mp3
+          git add -A -- examples
           if [ -d .source_chunks ]; then git rm -r -- .source_chunks; fi
           if ! git diff --cached --quiet; then
             git commit -m "data: materialize SHA-256 verified original audio"
