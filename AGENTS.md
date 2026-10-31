@@ -8,3 +8,10 @@
 - `analysis/legacy/` is a verbatim snapshot of the first experiment and contains `/mnt/data/` paths; do not present it as polished CLI tooling.
 - Keep the repository small. Before building sophisticated music intelligence, demonstrate improvements against human-evaluated samples.
 - Do not claim an edit is human-approved until the owner listens and confirms it.
+
+## Updated owner preference — one A first (2026-10-31)
+
+- Default for new user-uploaded songs: produce **only one strongest A candidate**, with complete MP3, local audition(s), one edit manifest, Audacity labels, QA; **stop for human feedback**. Do not generate B/C unless A needs work or the owner requests variations.
+- Source-relative segments, output-relative crossfade-start labels, preserve outro when practical. Use phase-aligned overlap (earlier source left_end - fade matches later source right_start), not just a time-based cut. Favor instrumental phrasing.
+- Do not conflate **Flaming Sky B/C not listened** with the older **seatrus B/C rejected**. Flaming Sky A is owner-accepted **as a whole**, not separately certified at its single join. Preserve exact feedback.
+- Read docs/one_candidate_workflow.md and examples/flaming_sky/README.md for the new accepted example. The helper scripts are provisional aids, not automated vocal-continuity gates.

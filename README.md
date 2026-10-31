@@ -2,7 +2,7 @@
 
 Experimental music-shortening tools and a reproducible, human-evaluated first experiment.
 
-**Status (2026-10-31):** One promising human-accepted 2:29 edit (A), two human-rejected vocal-jump edits (B/C). This is *not* yet a general-purpose automatic song editor. Candidate discovery and vocal-aware ranking remain experimental.
+**Status (2026-10-31):** Two human-accepted full edits: seatrus A (three splices) and Flaming Sky A (one splice). Seatrus B/C were rejected for vocal jumps; Flaming Sky B/C were **not listened to**. This is *not* yet a general-purpose automatic song editor. Candidate discovery and vocal-aware ranking remain experimental.
 
 ## Quick start
 
@@ -67,11 +67,32 @@ python analysis/match.py out/analysis/features.npz --from-range 63 64 --to-range
 
 `analysis/analyze.py` creates a similarity map and cached features. `analysis/scan_sections.py` proposes structural boundaries; `analysis/match.py` ranks potential musical similarities in two user-specified windows. The original exploratory scripts, with hardcoded `/mnt/data/` paths, remain under `analysis/legacy/` strictly for provenance; use the parameterized scripts for new songs. A reference [`song_map.png`](examples/seatrus/song_map.png) is included.
 
+## Default workflow: one A first
+
+After the Flaming Sky listening evaluation, **produce one carefully chosen A candidate, then stop for feedback**. Do not generate B/C until A is rejected or the owner requests alternatives. Include the full MP3, splice audition(s), an exact source-pinned manifest, Audacity labels, and QC. Favor instrumental repeat-matched jumps with crossfade-phase alignment; numerical similarity is *not* vocal-continuity or human acceptance.
+
+- [Single-candidate protocol](docs/one_candidate_workflow.md) — reproducible future workflow and guardrails.
+- [Accepted Flaming Sky edit](examples/flaming_sky/README.md) — owner-approved A: **2:28.428**, one join at edited-output 1:30.880. B/C not listened to.
+- [Single-cut suggestion tool](analysis/suggest_one_cut.py) — experimental structural shortlist from analysis feature cache, refined by waveform alignment.
+- [Single-variant renderer](scripts/render_one.py) — one MP3, splice auditions, labels, and exact source/duration QC.
+
+For a source audio that you own or otherwise have permission to use, start with:
+
+```sh
+python -m pip install -r requirements-analysis.txt
+python analysis/analyze.py "/path/to/song.mp3" --outdir out/analysis
+python analysis/suggest_one_cut.py --features out/analysis/features.npz --source "/path/to/song.mp3" --target 150
+# Review one promising join, then author a one-variant manifest.
+python scripts/render_one.py --manifest examples/flaming_sky/manifest.json --source "/path/to/flaming-sky-source.mp3" --outdir out/flaming_sky
+```
+
+As in the first experiment, do **not** commit generated cut MP3s, temporary WAVs, stems, or caches.
+
 ## Next steps
 
 1. Evaluate on 2–3 more songs with explicit listening feedback, retaining accepted/rejected splice metadata.
 2. Explore vocal activity and vocal-phrase boundaries (e.g. source separation), and apply large penalties to active-vocal joins.
-3. Generate ranked ~2:30 candidates, splice-preview montages, and Audacity label files automatically.
+3. Improve the single-A suggestion/preview/label workflow on additional human-evaluated songs, without treating algorithmic scores as approval.
 4. Prefer few coherent edits over mechanically matching the target length; listener acceptance is the quality gate.
 
 ## Rights

@@ -1,0 +1,28 @@
+{
+  "source": "JinoBeats - Ʌngelic Mechanism - 10 Flaming Sky (-Embers of Heaven- Long Ver.)",
+  "date": "2026-10-31",
+  "evaluator": "human listener / repository owner",
+  "variants": {
+    "A_one_repeat_join": {
+      "human_result": "accepted",
+      "human_feedback": "A is excellent. Going with this.",
+      "splice_feedback": [
+        {
+          "output_seconds": 90.88,
+          "result": "accepted_as_part_of_edit"
+        }
+      ],
+      "note": "Owner accepted the whole edit. The splice was not separately rated."
+    },
+    "B_two_repeat_joins": {
+      "human_result": "not_listened",
+      "human_feedback": "Owner did not listen to B; not a rejection or acceptance."
+    },
+    "C_full_intro_three_joins": {
+      "human_result": "not_listened",
+      "human_feedback": "Owner did not listen to C; not a rejection or acceptance."
+    }
+  },
+  "workflow_feedback": "Next songs: generate one promising A only; request owner listening feedback before producing more variants. B/C only on request or after A fails.",
+  "caveat": "Accepted as a whole, not proof that similarity models predict listener approval."
+}

@@ -1,0 +1,35 @@
+{
+  "source_name": "JinoBeats - -JKCD005- - Ʌngelic Mechanism - - 10 Flaming Sky (-Embers of Heaven- Long Ver.).mp3",
+  "source_seconds": 304.437505669,
+  "sample_rate_hz": 44100,
+  "method": "Same round(seconds*sample_rate) sample slicing, source float32 stereo PCM, short linear-overlap crossfades, 24-bit intermediate WAV and ffmpeg libmp3lame -qscale:a 0 as rb_audio_cut/reproduce_edits.py. No tempo/pitch shifting. All edits end with original outro.",
+  "source_sha256": "a1da2a9c586d37f0e6b370d2e1a2f75e05b062dda4c829957cfd006edf830632",
+  "variants": {
+    "A_one_repeat_join": {
+      "description": "Single repeat-matched jump, preserving complete opening and original final section and outro; strongest minimal-edit option.",
+      "segments": [
+        [
+          0,
+          91
+        ],
+        [
+          246.939,
+          304.437505669
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "notes": "The repeated passages near original 1:31 and 4:07 are closely aligned; source jump begins at crossfade overlap start so rhythms line up throughout the fade.",
+      "output": "A_one_repeat_join.mp3",
+      "duration_seconds": 148.378503,
+      "junction_output_seconds": [
+        90.88
+      ],
+      "encoded_duration_seconds": 148.428
+    }
+  },
+  "reference_render_sha256": {
+    "A_one_repeat_join": "1e04d4984e110323060bfce4f82f7dbcec6318a43aace69a3ffe424718f7b426"
+  }
+}
