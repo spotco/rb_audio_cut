@@ -1,0 +1,18 @@
+{
+  "song": "Titanium Ʌngel — Ʌngelic Mechanism — 02 Fallen Sentience",
+  "evaluated_on": "2026-10-31",
+  "preferred_variant": "B_one_first_section_repeat_join",
+  "variants": {
+    "A_one_repeat_join": {
+      "status": "acceptable_with_reservation_not_preferred",
+      "human_feedback_exact": "this one is acceptable, but a little odd - at the splice point, the piano comes in unexpectedly (though the background beat still matches).",
+      "observed_issue": "Beat and waveform align, but piano/arrangement appears unexpectedly at cross-section jump. A is not rejected, just less natural than B."
+    },
+    "B_one_first_section_repeat_join": {
+      "status": "approved_preferred",
+      "human_feedback_exact": "very nice, consider B approved. cannot even hear it.",
+      "observed_fix": "Shorter within-arrangement repeated-passage deletion keeps later piano entrance in the natural song progression; the owner heard no splice."
+    }
+  },
+  "lesson": "Instrument/arrangement continuity across several seconds matters independently of beat and overlap correlation. A ~0.781 and B ~0.786 were almost equally similar numerically, but B was preferred. Longer 3:09 version was permitted explicitly for B."
+}
