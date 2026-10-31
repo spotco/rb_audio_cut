@@ -2,7 +2,7 @@
 
 Experimental music-shortening tools and a reproducible, human-evaluated first experiment.
 
-**Status (2026-10-31):** Five owner-approved edits across seatrus (A), Flaming Sky (A), Fallen Sentience (B), Realm of Neogravity (A), and Seraphim (B). Seraphim A was rejected for an abrupt held-note-like entrance; the owner approved B after shifting the same structural cut ~7.2s later. Fallen Sentience A was acceptable with a reservation; seatrus B/C were rejected for vocal jumps; Flaming Sky B/C were not listened to. Candidate selection remains experimental; listening is the acceptance gate.
+**Status (2026-10-31):** Six owner-approved edits across seatrus (A), Flaming Sky (A), Fallen Sentience (B), Realm of Neogravity (A), Seraphim (B), and PSYCHO.TEC- (A). Seraphim A was rejected for an abrupt held-note-like entrance; the owner approved B after shifting the same structural cut ~7.2s later. Fallen Sentience A was acceptable with a reservation; seatrus B/C were rejected for vocal jumps; Flaming Sky B/C were not listened to. Candidate selection remains experimental; listening is the acceptance gate.
 
 ## Quick start
 
@@ -72,6 +72,7 @@ python analysis/match.py out/analysis/features.npz --from-range 63 64 --to-range
 After the Flaming Sky listening evaluation, **produce one carefully chosen A candidate, then stop for feedback**. Do not generate B/C until A is rejected or the owner requests alternatives. Include the full MP3, splice audition(s), an exact source-pinned manifest, Audacity labels, and QC. Favor instrumental repeat-matched jumps with crossfade-phase alignment; numerical similarity is *not* vocal-continuity or human acceptance.
 
 - [Single-candidate protocol](docs/one_candidate_workflow.md) — reproducible future workflow and guardrails.
+- [Approved PSYCHO.TEC- A](examples/psycho_tec/README.md) — single repeat-matched energetic-section join at edited output **1:21.925**, MP3 **2:25.633**; source-hash-pinned recipe, labels, QC and owner evaluation.
 - [Approved Realm of Neogravity A](examples/realm_of_neogravity/README.md) — one join at edited 1:29.010, MP3 2:25.737.
 - [Seraphim A rejected / B approved](examples/seraphim/README.md) — move *both* splice windows ~7.2s later to avoid a protruding sustained note without changing the output duration (B 2:21.322).
 
