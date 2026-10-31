@@ -1,0 +1,53 @@
+{
+  "source_name": "TeKno.loji - -JKCD006- PSYCHO.TEC- E.P. - 04 PSYCHO.TEC-.mp3",
+  "source_sha256": "ea4b202046cbd7f96699021f2adf8a04d9e89b1f0c6336437f61628f72cd9e25",
+  "source_seconds": 366.1233106575964,
+  "sample_rate_hz": 44100,
+  "source_channels": 2,
+  "source_size_bytes": 14816078,
+  "method": "rb_audio_cut/reproduce_edits.py exact float32 stereo PCM, round(seconds*sample_rate) indexing, 120ms linear overlap crossfade, PCM_24 intermediate WAV, libmp3lame -qscale:a 0. No generative audio, tempo or pitch alteration.",
+  "variants": {
+    "A_one_repeat_join": {
+      "description": "Owner-approved one-jump edit: skip an interior passage between matching energetic rhythmic patterns while retaining the original opening, late climax and mastered outro.",
+      "segments": [
+        [
+          0,
+          82.045
+        ],
+        [
+          302.467596,
+          366.1233106575964
+        ]
+      ],
+      "crossfades": [
+        0.12
+      ],
+      "output": "A_one_repeat_join.mp3",
+      "duration_seconds": 145.5807029478458,
+      "junction_output_seconds": [
+        81.925
+      ],
+      "notes": "Start the left 120ms overlap at edited 81.925s and align to right source 302.467596s. Source stereo context checked for sustained-note/arrangement continuity, beat phase and rhythm; approval applies to whole edit only and does not validate a numerical threshold.",
+      "reference_encoded_seconds": 145.632653,
+      "reference_output_sha256": "2fde44a44de2a38c05fe81e0db0ac38bea619fad8b8db49612f82ec81f0cd034",
+      "source_sample_indices": {
+        "segments": [
+          [
+            0,
+            3618184
+          ],
+          [
+            13338821,
+            16146038
+          ]
+        ],
+        "crossfade_samples": [
+          5292
+        ],
+        "crossfade_start_output_samples": [
+          3612892
+        ]
+      }
+    }
+  }
+}
